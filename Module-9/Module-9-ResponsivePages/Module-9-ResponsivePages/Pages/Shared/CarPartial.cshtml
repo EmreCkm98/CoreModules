@@ -1,0 +1,15 @@
+﻿@using Module_9_ResponsivePages.Models
+@model List<Car>
+<!-- bu sayfa model olarak car listesi alıyor. -->
+<table class="table table-striped">
+    @foreach (var car in Model)
+    {
+        <tr>
+            <td>@car.Model</td>
+            <td>@car.Make</td>
+            <td>@car.Year</td>
+            <td>$@car.Price</td>
+        </tr>
+    }
+</table>
+<!-- carservice.cs te tanımladığımız arabaları listeleyen partial sayfamız -->

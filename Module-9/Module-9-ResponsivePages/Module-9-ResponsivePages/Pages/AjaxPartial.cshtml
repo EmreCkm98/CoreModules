@@ -1,0 +1,17 @@
+﻿@page
+@model Module_9_ResponsivePages.Pages.AjaxPartialModel
+@{
+}
+<h2>Partial Page örneği</h2>
+<p><button class="btn btn-primary" id="load">Arabaları Listele</button></p>
+<div id="grid"></div>
+@section scripts{
+    <script>
+        $(function () {
+            $('#load').on('click', function () {
+                $('#grid').load('/ajaxpartial?handler=CarPartial');
+            });
+        });
+    </script>
+}
+    <!-- butona tıklanıldığında ajax ile CarPartial sayfasındaki listeyi ekrana getiriyoruz. -->
